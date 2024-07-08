@@ -1,7 +1,7 @@
 <body>
     <div>
         <?php
-            for ($x = 1; $x < 100; $x++) {
+            for ($x = 1; $x < 101; $x++) {
                 if ($x % 5 == 0 && $x % 3 == 0) {
                     print('FizzBuzz');
                 } elseif ($x % 5 == 0) {
@@ -11,7 +11,7 @@
                 } else {
                     print($x);
                 }
-                print('<br>'); // 改行を追加
+                print('<br>');
             }
         ?>
     </div>
