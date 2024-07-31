@@ -1,0 +1,44 @@
+.home {
+    background-color: #696969;
+}
+
+header {
+    background-color: #000000;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+
+}
+
+.login {
+    float: right;
+    color: black;
+    background-color: #00bfff;
+    display: block;
+    line-height: 40px;
+    padding: 0px 25px;
+    opacity: 0.8;
+    border-radius: 20px;
+    z-index: 10;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.login:hover {
+    opacity: 1;
+}
+
+.title {
+    text-align: center;
+    padding: 180px 60px;
+}
+
+.title h1 {
+    font-size: 82px;
+}
+
+.title h3 {
+    padding-top: 240px;
+    font-size: 32px;
+}
