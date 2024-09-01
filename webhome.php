@@ -1,4 +1,5 @@
 <?php
+session_start();
 // チャンピオン名とID
 $champion_dict = [
     ""=>0,
@@ -239,7 +240,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="home">
     <header>
         <div>
-            <a class="login" href="login.php" style="text-decoration: none;">ログイン</a>
+        <?php
+            if (isset($_SESSION["login"])) {
+                echo '<a class="login" href="logout.php" style="text-decoration: none;">ログアウト</a>';
+            } else {
+                echo '<a class="login" href="loginnow.php" style="text-decoration: none;">ログイン</a>';
+            }
+        ?>
         </div>
     </header>
     <div class="">

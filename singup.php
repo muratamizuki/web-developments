@@ -8,6 +8,7 @@
 <body>
     <div>
         <?php
+        session_start();
             try {
                 $db = new PDO('mysql:dbname=user;host=localhost;port=8889;charset=utf8', 'root', 'root');
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -19,7 +20,7 @@
             $password = $_POST["password"];
             $email = $_POST["email"];
             try {
-                $sql = "INSERT INTO items (name, password, emaail) VALUES (:name, :password, :email)";
+                $sql = "INSERT INTO user (name, password, email) VALUES (:name, :password, :email)";
                 $stmt = $db->prepare($sql);
                 $stmt->bindParam(':password', $password, PDO::PARAM_STR);
                 $stmt->bindParam(':name', $name, PDO::PARAM_STR);
