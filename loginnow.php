@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>web開発</title>
+  <link rel="stylesheet" href="web.css">
+</head>
 <h1>ログインページ</h1>
 <form action="login.php" method="post">
 <?php
@@ -21,4 +28,5 @@
     </label>
 </div>
 <input type="submit" value="ログイン">
+<a class="login" href="signup.html" style="text-decoration: none;">新規登録</a>
 </form>
