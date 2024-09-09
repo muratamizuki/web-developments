@@ -11,7 +11,16 @@ header {
     top: 0px;
 }
 
+.change {
+    float: left;
+    
+}
+
 .login {
+    float: right;
+}
+
+.switch {
     color: black;
     background-color: #00bfff;
     display: block;
@@ -22,10 +31,11 @@ header {
     z-index: 10;
     margin-top: 20px;
     margin-right: 40px;
-    float: right;
+    margin-left: 40px;
+    text-decoration: none;
 }
 
-.login:hover {
+.switch:hover {
     opacity: 1;
 }
 
@@ -43,6 +53,3 @@ header {
     font-size: 32px;
 }
 
-.team {
-    float: right;
-}

@@ -240,11 +240,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="home">
     <header>
         <div>
+            <a class="switch change" href="seisaku.php">リアルタイム予想</a>
         <?php
             if (isset($_SESSION["login"])) {
-                echo '<a class="login" href="logout.php" style="text-decoration: none;">ログアウト</a>';
+                echo '<a class="switch login" href="logout.php" style="text-decoration: none;">ログアウト</a>';
             } else {
-                echo '<a class="login" href="loginnow.php" style="text-decoration: none;">ログイン</a>';
+                echo '<a class="switch login" href="loginnow.php" style="text-decoration: none;">ログイン</a>';
             }
         ?>
         </div>
