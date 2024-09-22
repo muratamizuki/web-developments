@@ -185,7 +185,7 @@ function predict_match($champion_ids_100, $champion_ids_200) {
 
     if (count($output) >= 2) {
         $prediction = intval($output[0]);
-        $win_probability = array_map('floatval', explode(',', $output[1])); // 勝利確率
+        $win_probability = array_map('floatval', explode(',', $output[1])); 
         return [$prediction, $win_probability];
     } else {
         return [null, null];
@@ -221,7 +221,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $result = ($prediction == 1) ? "Team BLUE Wins" : "Team RED Wins";
             $win_probability_reversed = array_reverse($result_or_error);
         } else {
-            // $result_or_errorがnullでないことを確認
             $error_message = $result_or_error !== null ? $result_or_error : "不明なエラーが発生しました。";
             $error = "予測中にエラーが発生しました: " . htmlspecialchars($error_message, ENT_QUOTES, 'UTF-8');
         }
